@@ -4,7 +4,8 @@ import HomePage from '../views/HomePage.vue'
 import FormLicense from '../views/FormLicense.vue'
 import RequestForm from '../views/RequestForm.vue'
 import TaxForm from '../views/TaxForm.vue'
-import FormRequest from '../views/form/FormRequest.vue'
+import FormNormalRequest from '../views/form/FormNormalRequest.vue'
+import FormBuilding from '@/views/form/FormBuilding.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,9 +21,14 @@ const router = createRouter({
       component: FormLicense
     },
     {
-      path: '/form-request',
-      name: 'form-request',
-      component: FormRequest
+      path: '/form-normal-request',
+      name: 'form-normal-request',
+      component: FormNormalRequest
+    },
+    {
+      path: '/form-building',
+      name: 'form-building',
+      component: FormBuilding
     },
     {
       path: '/request',

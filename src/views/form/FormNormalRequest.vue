@@ -6,15 +6,7 @@
                     <h1 class="text-center">คำร้องทั่วไป</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-end">
-                        <div class="bg-secondary py-2 px-3 rounded-2">
-                            05 / กุมภาพันธ์ / 2567
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <DateNow />
             <div class="row">
                 <div class="col-12">
                     <form action="" method="post">
@@ -30,15 +22,7 @@
                             <label for="formGroupExampleInput2" class="form-label">มีความประสงค์</label>
                             <textarea name="" id="" class="form-control" rows="10" placeholder="ระบุความประสงค์ของท่าน"></textarea>
                         </div>
-                        <div class="alert alert-warning alert-text" role="alert">
-                            ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์
-                            <ol class="ps-3">
-                                <li>กรอกข้อมูลที่แท้จริงให้ครบถ้วนเพื่อสะดวกในการติดต่อกลับ กรณีจำเป็น</li>
-                                <li>ใช้ถ้อยคำที่สุภาพในการเขียนคำร้อง</li>
-                                <li>เครื่องหมาย * แสดงถึงช่องกรอกข้อมูลที่จำเป็นต้องระบุ</li>
-                                <li>ตรวจสอบความเรียบร้อยและความถูกต้องก่อน ส่งข้อมูล</li>
-                            </ol>
-                        </div>
+                        <FormInstruction />
                         <div class="mb-3">
                             <button class="btn btn-success text-white w-100">ส่งคำร้อง</button>
                         </div>
@@ -56,5 +40,6 @@
 </style>
 
 <script setup>
-
+    import FormInstruction from '@/components/FormInstruction.vue'
+    import DateNow from '@/components/DateNow.vue'
 </script>

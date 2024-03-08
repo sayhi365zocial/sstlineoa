@@ -1,0 +1,313 @@
+<template>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">ใบรับแจ้งประกอบกิจการสถานที่จำหน่ายและสะสมอาหาร</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-end">
+                        <div class="bg-secondary py-2 px-3 rounded-2">
+                            05 / กุมภาพันธ์ / 2567
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form class="form mt-1" action="" method="post"  autocomplete="off" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-12 text-right">
+                                <p>วัน / เดือน / ปี พ.ศ.</p>
+                            </div>
+                            <div class="col-12 text-right">
+                                <p>{{ new Date() }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="alert alert-success" role="alert">
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="radio" name="area_type" id="below_200" value="below_200" required>
+                                    <label class="form-check-label" for="below_200">ใบอนุญาติ (พื้นที่มากกว่า 200 ตร.ม. ขึ้นไป)</label>
+                                </div>
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="radio" name="area_type" id="above_200" value="above_200">
+                                    <label class="form-check-label" for="above_200">หนังสือรับรองการแจ้ง (พื้นที่ไม่เกิน 200 ตร.ม.)</label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="alert alert-primary" role="alert">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="request_type" id="new_request" value="new_request" required>
+                                        <label class="form-check-label" for="new_request">ขออนุญาตรายใหม่</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="request_type" id="extend" value="extend">
+                                        <label class="form-check-label" for="extend">ต่ออายุใบอนุญาตเดิม</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        @include('form.personal_information')
+                        <hr>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>ขอยื่นคำขอรับใบอนุญาตประกอบกิจการสถานที่จำหน่ายและสะสมอาหารต่อเจ้าพนักงานท้องถิ่น
+                                    รายละเอียดดังนี้</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="request_by" id="request_by_individual" value="request_by_individual" required>
+                                    <label class="form-check-label" for="request_by_individual">
+                                        บุคคลธรรมดา
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="request_by" id="request_by_business" value="request_by_business">
+                                    <label class="form-check-label" for="request_by_business">
+                                        นิติบุคคล หรือ รับมอบอำนาจ
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="establishment_name">ชื่อสถานประกอบการ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_name" name="business_name" placeholder="" value=""  required>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="business_type" id="sell_food" value="sell_food">
+                                    <label class="form-check-label" for="sell_food">จำหน่ายอาหาร</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="business_type" id="collect_food" value="collect_food">
+                                    <label class="form-check-label" for="collect_food">สะสมอาหาร</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="owner_name">เจ้าของกิจการคือ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_name" name="business_owner_name" placeholder="" value=""  required>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_house_no_type" id="is_house_no" value="is_house_no">
+                                    <label class="form-check-label" for="is_house_no">บ้านเลขที่</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_house_no_type" id="is_head_quarter_no" value="is_head_quarter_no">
+                                    <label class="form-check-label" for="is_head_quarter_no">สำนักงานใหญ่เลขที่</label>
+                                </div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <label for="about">บ้านเลขที่เจ้าของกิจการ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_house_no" name="business_owner_house_no" placeholder="" value="" required>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="moo">หมู่<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control rounded-0" id="business_owner_moo" name="business_owner_moo" placeholder="" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="soi">ตรอก/ซอย</label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_soi" name="business_owner_soi" placeholder="" value="">
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="road">ถนน<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_road" name="business_owner_road" placeholder="" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_sub_district" name="business_owner_sub_district" value="ศรีสุนทร" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="district">อำเภอ/เขต <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_district" name="business_owner_district" value="ถลาง" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="province">จังหวัด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_province" name="business_owner_province" value="ภูเก็ต" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="telephone_number">โทรศัพท์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_telephone_number" name="business_owner_telephone_number" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="business_owner_fax_number">โทรสาร</label>
+                                <input type="text" class="form-control rounded-0" id="business_owner_fax_number" name="business_owner_fax_number" placeholder="" value="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12 col-md-6 form-group ">
+                                <label for="establishment_number">สถานประกอบการเลขที่ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_house_no" name="business_house_no" placeholder="" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="moo">หมู่<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control rounded-0" id="business_moo" name="business_moo" placeholder="" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="soi">ตรอก/ซอย</label>
+                                <input type="text" class="form-control rounded-0" id="business_soi" name="business_soi" placeholder="" value="">
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="road">ถนน <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_road" name="business_road" placeholder="" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="sub_district">ตำบล/แขวง</label>
+                                <input type="text" class="form-control rounded-0" id="business_sub_district" name="business_sub_district" value="ศรีสุนทร" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="district">อำเภอ/เขต</label>
+                                <input type="text" class="form-control rounded-0" id="business_district" name="business_district" value="ถลาง" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="province">จังหวัด</label>
+                                <input type="text" class="form-control rounded-0" id="business_province" name="business_province" value="ภูเก็ต" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="telephone_number">โทรศัพท์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_telephone_number" name="business_telephone_number" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6 form-group">
+                                <label for="business_fax_number">โทรสาร</label>
+                                <input type="text" class="form-control rounded-0" id="business_fax_number" name="business_fax_number" placeholder="" value="">
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="area_owner_type" id="is_owner" value="is_owner" required>
+                                <label class="form-check-label" for="is_owner">เป็นเจ้าของสถานที่</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="area_owner_type" id="is_tenant" value="is_tenant">
+                                <label class="form-check-label" for="is_tenant">เป็นผู้เช่า</label>
+                            </div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <label for="">รายละเอียดการเช่า</label>
+                            <input type="text" class="form-control rounded-0" id="rent_detail" name="rent_detail" value="">
+                        </div>
+                        <div class="col-12 mb-2 form-group">
+                            <label for="detail">เอกสารแนบการเช่า<span class="text-danger">*</span></label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="rent_document" name="rent_document" accept="image/*,application/pdf">
+                                <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="establishment">สถานประกอบการ(รวมทั้งอาคารประกอบการ)เนื้อที่ (ตารางเมตร)<span
+                                        class="text-danger">*</span></label>
+                                <input type="number" step="1" min="0" class="form-control rounded-0" id="business_area" name="business_area" placeholder="" required value="">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label" for="">
+                                        อาคารประกอบการ
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="building" id="building_existing" value="building_existing">
+                                    <label class="form-check-label" for="building_existing">มีอยู่เดิม</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="building" id="building_new" value="building_new">
+                                    <label class="form-check-label" for="building_new">ก่อสร้างใหม่</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="establishment">สถานที่ประกอบการอยู่ใกล้เคียงกับ<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="business_nearby" name="business_nearby" placeholder="" required value="">
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-4 form-group">
+                                <label for="work">ทำงานปกติตั้งแต่เวลา (น.)<span class="text-danger">*</span></label>
+                                <input type="time" class="form-control rounded-0" id="open_time" name="open_time" placeholder="" required value="">
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <label for="time">ถึงเวลา (น.)<span class="text-danger">*</span></label>
+                                <input type="time" class="form-control rounded-0" id="close_time" name="close_time" placeholder="" required value="">
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <label for="weekly">วันหยุดงานประจำสัปดาห์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="close_day" name="close_day" placeholder="" required value="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <label for="latitude">ละติจูด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="latitude" name="latitude" placeholder="" required value="">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="longitude">ลองจิจูด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="longitude" name="longitude" placeholder="" required value="">
+                            </div>
+                            <div class="col-12 mt-2 mb-4">
+                                <div id="map" style="height: 500px;"></div>
+                            </div>
+                        </div>
+
+                        @include('form.registration_file_upload_set')
+
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <p>ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์</p>
+                                    <p>1.กรอกข้อมูลที่แท้จริงให้ครบถ้วนเพื่อสะดวกในการติดต่อกลับ กรณีจำเป็น</p>
+                                    <p>2.ใช้ถ้อยคำที่สุภาพในการเขียนคำร้อง</p>
+                                    <p>3.เครื่องหมาย * แสดงถึงช่องกรอกข้อมูลที่จำเป็นต้องระบุ</p>
+                                    <p>4.ตรวจสอบความเรียบร้อยและความถูกต้องก่อน ส่งข้อมูล</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>    
+</template>
+
+<style scoped>
+    .alert-text {
+        font-size: 0.75rem;
+    }
+</style>
+
+<script setup>
+
+</script>
