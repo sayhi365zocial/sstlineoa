@@ -22,70 +22,68 @@
 
 <script setup>
 import { reactive } from 'vue'
-import { RouterLink } from 'vue-router'
-
 import Menu from '@/components/Menu.vue'
 
 const menus = reactive([
     {
         name: 'คำร้องขอใช้น้ำประปา',
         image: 'images/icon-e-service/e-service/05e-service.png',
-        link: 'form-request',
-    },
+        link: 'form-water-supply-request',
+    }, 
     {
         name: 'คำร้องขอยืมครุภัณฑ์',
         image: 'images/icon-e-service/e-service/06e-service.png',
-        link: '',
+        link: 'form-durable-article-request',
     },
     {
         name: 'คำร้องขอใช้รถยนต์บรรทุกโดยสาร (สองแถว)',
         image: 'images/icon-e-service/e-service/07e-service.png',
-        link: '',
+        link: 'form-public-bus',
     },
     {
         name: 'คำร้องขอรับใบอนุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ',
         image: 'images/icon-e-service/e-service/09e-service.png',
-        link: '',
+        link: 'form-business-health-hazard',
     },
     {
         name: 'คำร้องขออนุญาตก่อสร้าง',
         image: 'images/icon-e-service/e-service/11e-service.png',
-        link: '',
+        link: 'form-building',
     },
     {
         name: 'คำร้องเก็บขนขยะมูลฝอย',
         image: 'images/icon-e-service/e-service/12e-service.png',
-        link: '',
+        link: 'form-clearning-waste',
     },
     {
         name: 'คำร้องเก็บขนสิ่งปฏิกูล',
         image: 'images/icon-e-service/e-service/13e-service.png',
-        link: '',
+        link: 'form-clearning-garbage',
     },
     {
         name: 'แบบแจ้งและตอบรับการแจงฆ่าสัตว์',
         image: 'images/icon-e-service/e-service/14e-service.png',
-        link: '',
+        link: 'form-business-slaughter-house',
     },
     {
-        name: 'ใบขอรับอนุญาตประกอบกิจการรับทำการเก้บ ขน และกำจัดมุลฝอยติดเชื้อ',
+        name: 'ใบขอรับอนุญาตประกอบกิจการรับทำการเก็บ ขน และกำจัดมูลฝอยติดเชื้อ',
         image: 'images/icon-e-service/e-service/15e-service.png',
-        link: '',
+        link: 'form-business-collection-hazard-waste',
     },
     {
         name: 'ใบรับแจ้งประกอบกิจการสถานที่จำหน่ายและสะสมอาหาร ',
         image: 'images/icon-e-service/e-service/16e-service.png',
-        link: '',
+        link: 'form-business-collection-food',
     },
     {
-        name: 'ใบรับแจ้งประกอบกิจการคำขอรับใบอนุญาตรับทำการเก้บขยะมูลฝอยและขนสิ่งปฏิกูล',
+        name: 'ใบรับแจ้งประกอบกิจการคำขอรับใบอนุญาตรับทำการเก็บขยะมูลฝอยและขนสิ่งปฏิกูล',
         image: 'images/icon-e-service/e-service/18.png',
-        link: '',
+        link: 'form-clearning-waste',
     },
     {
         name: 'คำขอรับใบอนุญาตประกอบกิจการการจัดตั้งตลาด',
         image: 'images/icon-e-service/e-service/19.png',
-        link: '',
+        link: 'form-business-market',
     },
     
 ])

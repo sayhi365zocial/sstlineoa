@@ -22,7 +22,6 @@
 
 <script setup>
 import { reactive } from 'vue'
-import { RouterLink } from 'vue-router'
 
 import Menu from '@/components/Menu.vue'
 
@@ -30,32 +29,32 @@ const menus = reactive([
     {
         name: 'ภาษีที่ดินและสิ่งปลูกสร้าง',
         image: 'images/icon-e-service/tax/02tax.png',
-        link: 'form-request',
+        link: '',
     },
     {
         name: 'ภาษีป้าย',
         image: 'images/icon-e-service/tax/04sign.png',
-        link: 'form-request',
+        link: '',
     },
     {
         name: 'ประชาสัมพันธ์ข่าวสารงานจัดเก็บรายได้',
         image: 'images/icon-e-service/tax/05tax.png',
-        link: 'form-request',
+        link: '',
     },
     {
         name: 'คำร้องคัดค้านประเมิณภาษีหรือการเรียกเก็บภาษีที่ดินและสิ่งปลูกสร้าง',
         image: 'images/icon-e-service/tax/05tax.png',
-        link: 'form-request',
+        link: 'form-objection-tax',
     },
     {
-        name: 'คำร้องขอรับเงินภาาีที่ดินและสิ่งปลูกสร้างคืน',
+        name: 'คำร้องขอรับเงินภาษีที่ดินและสิ่งปลูกสร้างคืน',
         image: 'images/icon-e-service/tax/02tax.png',
-        link: 'form-request',
+        link: 'form-refund-tax',
     },
     {
         name: 'แบบแจ้งการเปลี่ยนแปลงการใช้ประโยชน์ในที่ดินหรือสิ่งปลูกสร้าง',
         image: 'images/icon-e-service/tax/02tax.png',
-        link: 'form-request',
+        link: 'form-request-change-property',
     }
 
 ])

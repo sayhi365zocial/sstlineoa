@@ -6,28 +6,10 @@
                     <h1 class="text-center">คำร้องขอยืมครุภัณฑ์</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-end">
-                        <div class="bg-secondary py-2 px-3 rounded-2">
-                            05 / กุมภาพันธ์ / 2567
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <DateNow />
             <div class="row">
                 <div class="col-12">
                     <form class="form mt-1" action="" method="post">
-
-                        <!-- code hear -->
-                        <div class="row">
-                            <div class="col-12 text-right">
-                                <p>วัน / เดือน / ปี พ.ศ.</p>
-                            </div>
-                            <div class="col-12 text-right">
-                                <p>{{ new Date() }}</p>
-                            </div>
-                        </div>
                         <PersonalInformation />
                         <div class="row">
                             <div class="col-12">
@@ -43,7 +25,7 @@
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label" for="">จำนวน</label>
                                     <div class="p-2">
-                                        <input type="text" class="form-control rounded-0" id="water_tank_500_liter_count" name="water_tank_500_liter_count" placeholder="">
+                                        <input type="text" class="form-control" id="water_tank_500_liter_count" name="water_tank_500_liter_count" placeholder="">
                                     </div>
                                     <label class="form-check-label" for="flexCheckDefault">ถัง</label>
                                 </div>
@@ -58,7 +40,7 @@
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label" for="">จำนวน</label>
                                     <div class="p-2">
-                                        <input type="text" class="form-control rounded-0" id="box_triangle_count" name="box_triangle_count" placeholder="">
+                                        <input type="text" class="form-control" id="box_triangle_count" name="box_triangle_count" placeholder="">
                                     </div>
                                     <label class="form-check-label" for="flexCheckDefault">ตู้</label>
                                 </div>
@@ -72,29 +54,29 @@
                                         อื่นๆ
                                     </label>
                                     <div class="p-2">
-                                        <input type="text" class="form-control rounded-0" id="other" name="other" placeholder="">
+                                        <input type="text" class="form-control" id="other" name="other" placeholder="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="topic">เพื่อนำไปใช้เกี่ยวกับ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="purpose" name="purpose" placeholder="" required>
+                                <input type="text" class="form-control" id="purpose" name="purpose" placeholder="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 col-md-6 form-group mb-3">
                                 <label for="text">สถานที่<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="place" name="place" placeholder="" required>
+                                <input type="text" class="form-control" id="place" name="place" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 col-md-6 form-group mb-3">
                                 <label for="text">ซึ่งใช้ในวันที่ <span class="text-danger">*</span></label>
-                                <input type="date" class="form-control rounded-0" id="use_date" name="use_date" placeholder="" required>
+                                <input type="date" class="form-control" id="use_date" name="use_date" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 col-md-6 form-group mb-3">
                                 <label for="text">และจะส่งมอบคืนครุภัณฑ์ในวันที่ <span class="text-danger">*</span></label>
-                                <input type="date" class="form-control rounded-0" id="return_date" name="return_date" placeholder="" required>
+                                <input type="date" class="form-control" id="return_date" name="return_date" placeholder="" required>
                             </div>
                         </div>
                         <div class="row">
@@ -104,20 +86,10 @@
                         </div>
 
 
+                       <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <p>ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์</p>
-                                    <p>1.กรอกข้อมูลที่แท้จริงให้ครบถ้วนเพื่อสะดวกในการติดต่อกลับ กรณีจำเป็น</p>
-                                    <p>2.ใช้ถ้อยคำที่สุภาพในการเขียนคำร้อง</p>
-                                    <p>3.เครื่องหมาย * แสดงถึงช่องกรอกข้อมูลที่จำเป็นต้องระบุ</p>
-                                    <p>4.ตรวจสอบความเรียบร้อยและความถูกต้องก่อน ส่งข้อมูล</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -135,4 +107,6 @@
 
 <script setup>
     import PersonalInformation from '@/components/PersonalInformation.vue'
+    import DateNow from '@/components/DateNow.vue'
+    import FormInstruction from '@/components/FormInstruction.vue'
 </script>

@@ -7,65 +7,50 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-end">
-                        <div class="bg-secondary py-2 px-3 rounded-2">
-                            05 / กุมภาพันธ์ / 2567
-                        </div>
-                    </div>
-                </div>
+                <DateNow />
             </div>
             <div class="row">
                 <div class="col-12">
                     <form class="form mt-1" action="" method="post">
-
-                        <!-- code hear -->
-                        <div class="row">
-                            <div class="col-12 text-right">
-                                <p>วัน / เดือน / ปี พ.ศ.</p>
-                            </div>
-                            <div class="col-12 text-right">
-                            </div>
-                            <p>{{ new Date() }}</p>
-                        </div>
+                       
                         <div class="row">
                             <div class="col-12">
                                 <p>เจ้าของอาคาร/ตัวแทนเจ้าของอาคาร/สถานที่ก่อสร้าง</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="owner_firstname">ชื่อ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="owner_firstname" name="owner_firstname" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="owner_lastname">นามสกุล <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="owner_lastname" name="owner_lastname" value="" placeholder="" required>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">หมู่ที่ <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="building_moo" name="building_moo" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">ตำบล <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="" name="building_sub_district" value="" placeholder="ศรีสุนทร" readonly>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">อำเภอ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="" name="building_district" value="" placeholder="ถลาง" readonly>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
-                                <label for="text">จังหวัก <span class="text-danger">*</span></label>
+                            <div class="col-12 form-group mb-3">
+                                <label for="text">จังหวัด <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="" name="building_province" value="" placeholder="ภูเก็ต" readonly>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">ลักษณะอาคาร (ชั้น) <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="building_type" name="building_type" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">จำนวน (หลัง/คูหา) <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="building_qty" name="building_qty" value="" placeholder="" required>
                             </div>
@@ -99,132 +84,132 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">จดทะเบียนเมื่อ <span class="text-danger">*</span></label>
                                 <input type="date" class="form-control rounded-0" id="registration_date" name="registration_date" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">เลขทะเบียน <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_number" name="registration_number" value="" placeholder="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_house_no">มีสำนักงานตั้งอยู่เลขที่ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_house_no" name="business_house_no" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_moo">หมู่ <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="business_moo" name="business_moo" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_soi">ตรอก/ซอย <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_soi" name="business_soi" value="" placeholder="">
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_road">ถนน <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_road" name="business_road" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_sub_district" name="business_sub_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_district">อำเภอ/เขต <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_district" name="business_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="business_province">จังหวัด <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="business_province" name="business_province" value="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_by">โดย <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_by" name="registration_by" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_house_no">ผู้มีอำนาจลงชื่อแทนนิติบุคคล ผู้ขออนุญาตอยู่บ้านเลขที่ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_house_no" name="registration_house_no" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_moo">หมู่ <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="registration_moo" name="registration_moo" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_soi">ตรอก/ซอย <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_soi" name="registration_soi" value="" placeholder="">
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_road">ถนน <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_road" name="registration_road" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_sub_district" name="registration_sub_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_district">อำเภอ/เขต <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_district" name="registration_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="registration_province">จังหวัด <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="registration_province" name="registration_province" value="" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="to_receive">ขอยื่นคำขอรับใบอนุญาต <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="to_receive" name="to_receive" value="" placeholder="" required>
                             </div>
 
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <p>ต่อเจ้าพนักงานท้องถิ่น ดังต่อไปนี้ </p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_house_no">ข้อ 1 ทำการก่อสร้างอาคาร/ดัดแปลงอาคาร/รื้อถอนอาคาร/บ้านเลขที่ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_house_no" name="modify_house_no" value="" placeholder="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modidy_moo">หมู่ <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="modidy_moo" name="modidy_moo" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_soi">ตรอก/ซอย <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_soi" name="modify_soi" value="" placeholder="">
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_road">ถนน <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_road" name="modify_road" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_sub_district" name="modify_sub_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_district">อำเภอ/เขต <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_district" name="modify_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_province">จังหวัด <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_province" name="modify_province" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_by">โดย <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_by" name="modify_by" placeholder="" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_deed_number">เป็นเจ้าของอาคารในที่ดินโฉนดที่ดิน เลขที่/นส.3กเลขที่/สด.1เลขที่ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_deed_number" name="modify_deed_number" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="modify_deed_owner">เป็นที่ดินของ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="modify_deed_owner" name="modify_deed_owner" value="" placeholder="" required>
                             </div>
@@ -233,19 +218,19 @@
                             <div class="col-12">
                                 <p>ข้อ 2 เป็นอาคาร</p>
                             </div>
-                            <div class="col-12 col-md-4 form-group">
+                            <div class="col-12 col-md-4 form-group mb-3">
                                 <label for="building_target_type">(1) ชนิด <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="building_target_type" name="building_target_type" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-4 form-group">
+                            <div class="col-12 col-md-4 form-group mb-3">
                                 <label for="building_target_qty">จำนวน <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="building_target_qty" name="building_target_qty" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 col-md-4 form-group">
+                            <div class="col-12 col-md-4 form-group mb-3">
                                 <label for="building_target_purpose">เพื่อใช้เป็น <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="building_target_purpose" name="building_target_purpose" value="" placeholder="" required>
                             </div>
-                            <div class="col-12 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="building_target_car_parking_qty">โดยมีที่จอดรถ ที่กลับรถ และทางเข้าออกของรถ จำนวน (คัน) <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control rounded-0" id="building_target_car_parking_qty" name="building_target_car_parking_qty" value="" placeholder="" required>
                             </div>
@@ -254,14 +239,14 @@
                             <div class="col-12">
                                 <p>ตามแผนผังบริเวณ แบบแปลน รายการประกอบแปลน และรายการคำนวณที่แนบมาพร้อมนี้</p>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="engineer_name">ข้อ 3 มีผู้ควบคุมงานชื่อ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control rounded-0" id="engineer_name" name="engineer_name" value="" placeholder="" required>
                             </div>
                             <div class="col-12">
                                 <p>เป็นผู้ออกแบบ และคำนวณ</p>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="deadline">ข้อ 4 กำหนดแล้วเสร็จใน (วัน) นับตั้งแต่วันที่ได้รับใบอนุญาต<span class="text-danger">*</span></label>
                                 <input type="date" class="form-control rounded-0" id="deadline" name="deadline" value="" placeholder="" required>
                             </div>
@@ -301,17 +286,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <p>ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์</p>
-                                    <p>1.กรอกข้อมูลที่แท้จริงให้ครบถ้วนเพื่อสะดวกในการติดต่อกลับ กรณีจำเป็น</p>
-                                    <p>2.ใช้ถ้อยคำที่สุภาพในการเขียนคำร้อง</p>
-                                    <p>3.เครื่องหมาย * แสดงถึงช่องกรอกข้อมูลที่จำเป็นต้องระบุ</p>
-                                    <p>4.ตรวจสอบความเรียบร้อยและความถูกต้องก่อน ส่งข้อมูล</p>
-                                </div>
-                            </div>
-                        </div>
+                       <FormInstruction />
                         <div class="row">
                             <div class="col-12">
                                 <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
@@ -331,5 +306,7 @@
 </style>
 
 <script setup>
+import DateNow from '@/components/DateNow.vue'
+import FormInstruction from '@/components/FormInstruction.vue'
 
 </script>

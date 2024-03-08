@@ -22,7 +22,7 @@
 
 <script setup>
 import { reactive } from 'vue'
-import { RouterLink } from 'vue-router'
+
 
 import Menu from '@/components/Menu.vue'
 
@@ -30,13 +30,13 @@ const menus = reactive([
     {
         name: 'ร้องเรียนการทุจริต',
         image: 'images/icon-e-service/e-service/03e-service.png',
-        link: 'form-request',
+        link: 'form-normal-request',
     },
     {
         name: 'ร้องเรียนร้องทุกข์',
         image: 'images/icon-e-service/e-service/04e-service.png',
-        link: '',
-    }, 
+        link: 'form-complain-request',
+    },
 ])
 
 </script>

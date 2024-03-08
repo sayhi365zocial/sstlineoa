@@ -6,72 +6,53 @@
                     <h1 class="text-center">คำร้องเก็บขนขยะมูลฝอย</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-end">
-                        <div class="bg-secondary py-2 px-3 rounded-2">
-                            05 / กุมภาพันธ์ / 2567
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <DateNow />
             <div class="row">
                 <div class="col-12">
                     <form class="form mt-1" action="" method="post">
-
-                        <!-- code hear -->
-                        <div class="row">
-                            <div class="col-12 text-right">
-                                <p>วัน / เดือน / ปี พ.ศ.</p>
-                            </div>
-                            <div class="col-12 text-right">
-                                <p>{{ new Date() }}</p>
-                            </div>
-                        </div>
-                        <hr>
+                       
                         <PersonalInformation />
-                        <hr>
+                        
                         <div class="row">
                             <div class="col-12">
                                 <h6>มีความประสงค์ต่อเทศบาลตำบลศรีสุนทร ให้เข้าจัดเก็บขยะมลูฝอย</h6>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_house_no">โดยถังขยะตั้งอยู่บ้านเลขที่ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_house_no" name="for_house_no" placeholder="" value="" required>
+                                <input type="text" class="form-control" id="for_house_no" name="for_house_no" placeholder="" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_moo">หมู่ <span class="text-danger">*</span></label>
-                                <input type="number" class="form-control rounded-0" id="for_moo" name="for_moo" placeholder="" value="">
+                                <input type="number" class="form-control" id="for_moo" name="for_moo" placeholder="" value="">
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_soi">ตรอก/ซอย <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_soi" name="for_soi" placeholder="" value="">
+                                <input type="text" class="form-control" id="for_soi" name="for_soi" placeholder="" value="">
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_road">ถนน <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_road" name="for_road" placeholder="" value="" required>
+                                <input type="text" class="form-control" id="for_road" name="for_road" placeholder="" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_sub_district" name="for_sub_district" value="" required>
+                                <input type="text" class="form-control" id="for_sub_district" name="for_sub_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_district">อำเภอ/เขต <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_district" name="for_district" value="" required>
+                                <input type="text" class="form-control" id="for_district" name="for_district" value="" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="for_province">จังหวัด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="for_province" name="for_province" value="" required>
+                                <input type="text" class="form-control" id="for_province" name="for_province" value="" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-12 ">
-                                <div class="form-check form-check-inline">
-                                    <label class="form-check-label" for="">
-                                        ประเภทอาคาร
+                            <div class="col-12 mb-3">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="">ประเภทอาคาร
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -86,13 +67,13 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 mb-3">
                                 <label for="latitude">ละติจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="latitude" name="latitude" placeholder="" required value="">
+                                <input type="text" class="form-control" id="latitude" name="latitude" placeholder="" required value="">
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 mb-3">
                                 <label for="longitude">ลองจิจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="longitude" name="longitude" placeholder="" required value="">
+                                <input type="text" class="form-control" id="longitude" name="longitude" placeholder="" required value="">
                             </div>
                             <div class="col-12 mt-2 mb-4">
                                 <div id="map" style="height: 500px;"></div>
@@ -100,11 +81,11 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-12 form-group">
+                            <div class="col-12 form-group mb-3">
                                 <label for="text">ทั้งนี้ ข้าพเจ้ายินดีปฏิบัติตามเทศบัญญัติตำบลศรีสุนทร หรือตามเงื่อนไขที่กำหนด
                                     และยินดีชำระค่าธรรมเนียมการจัดเก็บขยะเป็นรายเดือนๆ ละ (บาท) <span
                                         class="text-danger">*</span></label>
-                                <input type="number" class="form-control rounded-0" id="price" name="price" placeholder="เฉพาะเจ้าหน้าที่">
+                                <input type="number" class="form-control" id="price" name="price" placeholder="เฉพาะเจ้าหน้าที่">
                             </div>
                         </div>
                         <div class="row">
@@ -164,20 +145,10 @@
                             </div>
                         </div>
 
+                       <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <p>ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์</p>
-                                    <p>1.กรอกข้อมูลที่แท้จริงให้ครบถ้วนเพื่อสะดวกในการติดต่อกลับ กรณีจำเป็น</p>
-                                    <p>2.ใช้ถ้อยคำที่สุภาพในการเขียนคำร้อง</p>
-                                    <p>3.เครื่องหมาย * แสดงถึงช่องกรอกข้อมูลที่จำเป็นต้องระบุ</p>
-                                    <p>4.ตรวจสอบความเรียบร้อยและความถูกต้องก่อน ส่งข้อมูล</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -195,4 +166,6 @@
 
 <script setup>
     import PersonalInformation from '@/components/PersonalInformation.vue'
+    import DateNow from '@/components/DateNow.vue'
+    import FormInstruction from '@/components/FormInstruction.vue'
 </script>
