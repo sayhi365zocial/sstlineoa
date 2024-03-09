@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -48,7 +48,7 @@
                         <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn bg-theme-green btn-block w-100 text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>

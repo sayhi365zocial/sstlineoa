@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -65,8 +65,8 @@
                         </div>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="establishment_name">ชื่อสถานประกอบการ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_name" name="business_name" placeholder="" value=""  required>
+                                <label for="establishment_name" class="form-label mb-3">ชื่อสถานประกอบการ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_name" name="business_name" placeholder="" value=""  required>
                             </div>
                             <div class="col-12 ">
                                 <div class="form-check form-check-inline mb-3">
@@ -81,8 +81,8 @@
                         </div>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="owner_name">เจ้าของกิจการคือ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_name" name="business_owner_name" placeholder="" value=""  required>
+                                <label for="owner_name" class="form-label mb-3">เจ้าของกิจการคือ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_name" name="business_owner_name" placeholder="" value=""  required>
                             </div>
                             <div class="col-12">
                                 <div class="form-check form-check-inline mb-3">
@@ -95,43 +95,43 @@
                                 </div>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="about">บ้านเลขที่เจ้าของกิจการ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_house_no" name="business_owner_house_no" placeholder="" value="" required>
+                                <label for="about" class="form-label mb-3">บ้านเลขที่เจ้าของกิจการ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_house_no" name="business_owner_house_no" placeholder="" value="" required>
                             </div>
                         </div>
                         <div class="row">
 
-                            <div class="col-12 form-group mb-3">
-                                <label for="moo">หมู่<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control rounded-0" id="business_owner_moo" name="business_owner_moo" placeholder="" value="" required>
+                            <div class="col-6 form-group mb-3">
+                                <label for="moo" class="form-label mb-3">หมู่<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control form-control-lg" id="business_owner_moo" name="business_owner_moo" placeholder="" value="" required>
+                            </div>
+                            <div class="col-6 form-group mb-3">
+                                <label for="soi" class="form-label mb-3">ตรอก/ซอย</label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_soi" name="business_owner_soi" placeholder="" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="soi">ตรอก/ซอย</label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_soi" name="business_owner_soi" placeholder="" value="">
+                                <label for="road" class="form-label mb-3">ถนน<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_road" name="business_owner_road" placeholder="" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="road">ถนน<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_road" name="business_owner_road" placeholder="" value="" required>
+                                <label for="sub_district" class="form-label mb-3">ตำบล/แขวง <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_sub_district" name="business_owner_sub_district" value="ศรีสุนทร" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_sub_district" name="business_owner_sub_district" value="ศรีสุนทร" required>
+                                <label for="district" class="form-label mb-3">อำเภอ/เขต <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_district" name="business_owner_district" value="ถลาง" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="district">อำเภอ/เขต <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_district" name="business_owner_district" value="ถลาง" required>
+                                <label for="province" class="form-label mb-3">จังหวัด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_province" name="business_owner_province" value="ภูเก็ต" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="province">จังหวัด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_province" name="business_owner_province" value="ภูเก็ต" required>
+                                <label for="telephone_number" class="form-label mb-3">โทรศัพท์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_telephone_number" name="business_owner_telephone_number" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="telephone_number">โทรศัพท์<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_telephone_number" name="business_owner_telephone_number" value="" required>
-                            </div>
-                            <div class="col-12 form-group mb-3">
-                                <label for="business_owner_fax_number">โทรสาร</label>
-                                <input type="text" class="form-control rounded-0" id="business_owner_fax_number" name="business_owner_fax_number" placeholder="" value="">
+                                <label for="business_owner_fax_number" class="form-label mb-3">โทรสาร</label>
+                                <input type="text" class="form-control form-control-lg" id="business_owner_fax_number" name="business_owner_fax_number" placeholder="" value="">
                             </div>
                         </div>
                         <div class="row">
@@ -139,40 +139,40 @@
                                 <hr>
                             </div>
                             <div class="col-12 form-group mb-3 ">
-                                <label for="establishment_number">สถานประกอบการเลขที่ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_house_no" name="business_house_no" placeholder="" value="" required>
+                                <label for="establishment_number" class="form-label mb-3">สถานประกอบการเลขที่ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_house_no" name="business_house_no" placeholder="" value="" required>
+                            </div>
+                            <div class="col-6 form-group mb-3">
+                                <label for="moo" class="form-label mb-3">หมู่<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control form-control-lg" id="business_moo" name="business_moo" placeholder="" value="" required>
+                            </div>
+                            <div class="col-6 form-group mb-3">
+                                <label for="soi" class="form-label mb-3">ตรอก/ซอย</label>
+                                <input type="text" class="form-control form-control-lg" id="business_soi" name="business_soi" placeholder="" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="moo">หมู่<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control rounded-0" id="business_moo" name="business_moo" placeholder="" value="" required>
+                                <label for="road" class="form-label mb-3">ถนน <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_road" name="business_road" placeholder="" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="soi">ตรอก/ซอย</label>
-                                <input type="text" class="form-control rounded-0" id="business_soi" name="business_soi" placeholder="" value="">
+                                <label for="sub_district" class="form-label mb-3">ตำบล/แขวง</label>
+                                <input type="text" class="form-control form-control-lg" id="business_sub_district" name="business_sub_district" value="ศรีสุนทร" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="road">ถนน <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_road" name="business_road" placeholder="" value="" required>
+                                <label for="district" class="form-label mb-3">อำเภอ/เขต</label>
+                                <input type="text" class="form-control form-control-lg" id="business_district" name="business_district" value="ถลาง" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="sub_district">ตำบล/แขวง</label>
-                                <input type="text" class="form-control rounded-0" id="business_sub_district" name="business_sub_district" value="ศรีสุนทร" required>
+                                <label for="province" class="form-label mb-3">จังหวัด</label>
+                                <input type="text" class="form-control form-control-lg" id="business_province" name="business_province" value="ภูเก็ต" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="district">อำเภอ/เขต</label>
-                                <input type="text" class="form-control rounded-0" id="business_district" name="business_district" value="ถลาง" required>
+                                <label for="telephone_number" class="form-label mb-3">โทรศัพท์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="business_telephone_number" name="business_telephone_number" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="province">จังหวัด</label>
-                                <input type="text" class="form-control rounded-0" id="business_province" name="business_province" value="ภูเก็ต" required>
-                            </div>
-                            <div class="col-12 form-group mb-3">
-                                <label for="telephone_number">โทรศัพท์<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_telephone_number" name="business_telephone_number" value="" required>
-                            </div>
-                            <div class="col-12 form-group mb-3">
-                                <label for="business_fax_number">โทรสาร</label>
-                                <input type="text" class="form-control rounded-0" id="business_fax_number" name="business_fax_number" placeholder="" value="">
+                                <label for="business_fax_number" class="form-label mb-3">โทรสาร</label>
+                                <input type="text" class="form-control form-control-lg" id="business_fax_number" name="business_fax_number" placeholder="" value="">
                             </div>
                         </div>
                         <div class="row">
@@ -187,22 +187,19 @@
                             </div>
                         </div>
                         <div class="col-12 form-group mb-3">
-                            <label for="">รายละเอียดการเช่า</label>
-                            <input type="text" class="form-control rounded-0" id="rent_detail" name="rent_detail" value="">
+                            <label for="">ร class="form-label mb-3"ายละเอียดการเช่า</label>
+                            <input type="text" class="form-control form-control-lg" id="rent_detail" name="rent_detail" value="">
                         </div>
                         <div class="col-12 mb-2 form-group mb-3">
-                            <label for="detail">เอกสารแนบการเช่า<span class="text-danger">*</span></label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="rent_document" name="rent_document" accept="image/*,application/pdf">
-                                <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                            </div>
+                            <label for="detail" class="form-label mb-3">เอกสารแนบการเช่า<span class="text-danger">*</span></label>
+                            <InputFile name="rent_document" />
                         </div>
                         </div>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="establishment">สถานประกอบการ(รวมทั้งอาคารประกอบการ)เนื้อที่ (ตารางเมตร)<span
+                                <label for="establishment" class="form-label mb-3">สถานประกอบการ(รวมทั้งอาคารประกอบการ)เนื้อที่ (ตารางเมตร)<span
                                         class="text-danger">*</span></label>
-                                <input type="number" step="1" min="0" class="form-control rounded-0" id="business_area" name="business_area" placeholder="" required value="">
+                                <input type="number" step="1" min="0" class="form-control form-control-lg" id="business_area" name="business_area" placeholder="" required value="">
                             </div>
                         </div>
                     
@@ -225,38 +222,38 @@
                         </div>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="establishment">สถานที่ประกอบการอยู่ใกล้เคียงกับ<span
+                                <label for="establishment" class="form-label mb-3">สถานที่ประกอบการอยู่ใกล้เคียงกับ<span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="business_nearby" name="business_nearby" placeholder="" required value="">
+                                <input type="text" class="form-control form-control-lg" id="business_nearby" name="business_nearby" placeholder="" required value="">
                                 
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12 col-md-4 form-group mb-3">
-                                <label for="work">ทำงานปกติตั้งแต่เวลา (น.)<span class="text-danger">*</span></label>
-                                <input type="time" class="form-control rounded-0" id="open_time" name="open_time" placeholder="" required value="">
+                                <label for="work" class="form-label mb-3">ทำงานปกติตั้งแต่เวลา (น.)<span class="text-danger">*</span></label>
+                                <input type="time" class="form-control form-control-lg" id="open_time" name="open_time" placeholder="" required value="">
                             </div>
                             <div class="col-12 col-md-4 form-group mb-3">
-                                <label for="time">ถึงเวลา (น.)<span class="text-danger">*</span></label>
-                                <input type="time" class="form-control rounded-0" id="close_time" name="close_time" placeholder="" required value="">
+                                <label for="time" class="form-label mb-3">ถึงเวลา (น.)<span class="text-danger">*</span></label>
+                                <input type="time" class="form-control form-control-lg" id="close_time" name="close_time" placeholder="" required value="">
                             </div>
                             <div class="col-12 col-md-4 form-group mb-3">
-                                <label for="weekly">วันหยุดงานประจำสัปดาห์<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="close_day" name="close_day" placeholder="" required value="">
+                                <label for="weekly" class="form-label mb-3">วันหยุดงานประจำสัปดาห์<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="close_day" name="close_day" placeholder="" required value="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <label for="latitude">ละติจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="latitude" name="latitude" placeholder="" required value="">
+                                <label for="latitude" class="form-label mb-3">ละติจูด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="latitude" name="latitude" placeholder="" required value="">
                             </div>
                             <div class="col-12 col-md-6">
-                                <label for="longitude">ลองจิจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="longitude" name="longitude" placeholder="" required value="">
+                                <label for="longitude" class="form-label mb-3">ลองจิจูด<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="longitude" name="longitude" placeholder="" required value="">
                             </div>
                             <div class="col-12 mt-2 mb-4">
-                                <div id="map" style="height: 500px;"></div>
+                                <div id="map" style="height: 200px; background-color: green;"><strong>Map</strong></div>
                             </div>
                         </div>
 
@@ -266,7 +263,7 @@
                         <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn bg-theme-green btn-block w-100 text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -288,5 +285,6 @@
     import FormInstruction from '@/components/FormInstruction.vue'
     import RegistrationFileUpload from '@/components/RegistrationFileUpload.vue'
     import PersonalInformation from '@/components/PersonalInformation.vue'
+    import InputFile from '@/components/InputFile.vue'
     
 </script>

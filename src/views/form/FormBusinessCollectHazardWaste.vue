@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -32,11 +32,11 @@
                         <div class="row" id="business">
                             <div class="col-12 form-group mb-3 ">
                                 <label for="to">โดย <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="request_by_name" name="request_by_name" placeholder="ชื่อผู้มีอำนาจลงนาม / กรรมการ" required>
+                                <input type="text" class="form-control form-control-lg" id="request_by_name" name="request_by_name" placeholder="ชื่อผู้มีอำนาจลงนาม / กรรมการ" required>
                             </div>
                             <div class="col-12 form-group mb-3 ">
                                 <label for="to">ปรากฎตาม <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control rounded-0" id="request_by_follow_by" name="request_by_follow_by" placeholder="หนังสือรับรองจดทะเบียนบริษัทเลขที่" required>
+                                <input type="text" class="form-control form-control-lg" id="request_by_follow_by" name="request_by_follow_by" placeholder="หนังสือรับรองจดทะเบียนบริษัทเลขที่" required>
                             </div>
                         </div>
                         <div class="row">
@@ -48,59 +48,38 @@
                         <div class="row">
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">สำเนาบัตรประจำตัวประชาชน/ข้าราชการ/พนักงานรัฐวิสาหกิจ/อื่นๆ ระบุ<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="applicant_idcard_file_path" name="applicant_idcard_file_path" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="applicant_idcard_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">สำเนาใบอนุญาตตามกฎหมายที่เกี่ยวข้อง<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="other_license_file_path" name="other_license_file_path" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="other_license_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">หนังสือให้ความเห็นชอบการประเมิณผลกระทบต่อสิ่งแวดล้อม<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="approval_natural_file_path" name="approval_natural_file_path" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="approval_natural_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">สำเนาหนังสือรับรองการจดทะเบียนเป็นนิติบุคคล<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="registration_business_file_path" name="registration_business_file_path" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="registration_business_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">หลักฐานที่แสดงการเป็นผู้มีอำนาจลงนามแทนนิติบุคคล<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="business_representor_file_path" name="business_representor_file_path" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="business_representor_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">รูปถ่าย หน้าสถานประกอบการ (ปัจจุบัน)<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="business_image" name="business_image" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์รูปถ่าย</label>
-                                </div>
+                                <InputFile name="business_image"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">รูปถ่ายรถขนขยะติดเชื้อ<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="truck_image" name="truck_image" accept="image/*,application/pdf" required>
-                                    <label class="custom-file-label" for="">เลือกไฟล์รูปถ่าย</label>
-                                </div>
+                                <InputFile name="truck_image"/>
                             </div>
                         </div>
 
                         <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block rounded-0 text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn bg-theme-green btn-block w-100 text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -120,6 +99,5 @@
     import PersonalInformation from '@/components/PersonalInformation.vue'
     import DateNow from '@/components/DateNow.vue'
     import FormInstruction from '@/components/FormInstruction.vue'
-    
-
+    import InputFile from '@/components/InputFile.vue'
 </script>

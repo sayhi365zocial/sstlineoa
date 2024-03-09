@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -21,31 +21,31 @@
                         <div class="row">
                             <div class="col-12 form-group mb-3">
                                 <label for="for_house_no">โดยถังขยะตั้งอยู่บ้านเลขที่ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_house_no" name="for_house_no" placeholder="" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="for_house_no" name="for_house_no" placeholder="" value="" required>
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="for_moo">หมู่ <span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" id="for_moo" name="for_moo" placeholder="" value="">
+                                <input type="number" class="form-control form-control-lg" id="for_moo" name="for_moo" placeholder="" value="">
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="for_soi">ตรอก/ซอย <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_soi" name="for_soi" placeholder="" value="">
+                                <input type="text" class="form-control form-control-lg" id="for_soi" name="for_soi" placeholder="" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="for_road">ถนน <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_road" name="for_road" placeholder="" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="for_road" name="for_road" placeholder="" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="for_sub_district">ตำบล/แขวง <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_sub_district" name="for_sub_district" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="for_sub_district" name="for_sub_district" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="for_district">อำเภอ/เขต <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_district" name="for_district" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="for_district" name="for_district" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="for_province">จังหวัด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="for_province" name="for_province" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="for_province" name="for_province" value="" required>
                             </div>
                         </div>
 
@@ -69,14 +69,14 @@
                         <div class="row">
                             <div class="col-12 mb-3">
                                 <label for="latitude">ละติจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="latitude" name="latitude" placeholder="" required value="">
+                                <input type="text" class="form-control form-control-lg" id="latitude" name="latitude" placeholder="" required value="">
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="longitude">ลองจิจูด<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="longitude" name="longitude" placeholder="" required value="">
+                                <input type="text" class="form-control form-control-lg" id="longitude" name="longitude" placeholder="" required value="">
                             </div>
                             <div class="col-12 mt-2 mb-4">
-                                <div id="map" style="height: 500px;"></div>
+                                <div id="map" style="height: 200px; background-color: green;"><strong>Map</strong></div>
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
                                 <label for="text">ทั้งนี้ ข้าพเจ้ายินดีปฏิบัติตามเทศบัญญัติตำบลศรีสุนทร หรือตามเงื่อนไขที่กำหนด
                                     และยินดีชำระค่าธรรมเนียมการจัดเก็บขยะเป็นรายเดือนๆ ละ (บาท) <span
                                         class="text-danger">*</span></label>
-                                <input type="number" class="form-control" id="price" name="price" placeholder="เฉพาะเจ้าหน้าที่">
+                                <input type="number" class="form-control form-control-lg" id="price" name="price" placeholder="เฉพาะเจ้าหน้าที่">
                             </div>
                         </div>
                         <div class="row">
@@ -148,7 +148,7 @@
                        <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: SukhumvitLight;
+    src: url('./fonts/SukhumvitSet-Light.ttf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: SukhumvitThin;
+    src: url('./fonts/SukhumvitSet-Thin.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: SukhumvitMedium;
+    src: url('./fonts/SukhumvitSet-Medium.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: SukhumvitText;
+    src: url('./fonts/SukhumvitSet-Text.ttf');
+    font-weight: 400;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SukhumvitSemiBold;
+    src: url('./fonts/SukhumvitSet-SemiBold.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: SukhumvitBold;
+    src: url('./fonts/SukhumvitSet-Bold.ttf');
+    font-weight: 700;
+}
+
+body {
+    font-family: SukhumvitText;
+    letter-spacing: 0.05rem;
+    background-color: #F3F5F9;
+}
+
+.bg-custom-gray {
+    background-color: #f4f5f9;
+    color: #1D1D1D;
+}
+
+
+.text-theme-green {
+    color: #007F36;
+}
+
+.text-theme-white {
+    color: #ffffff;
+}
+.text-theme-black {
+    color: #000000;
+}
+.text-font-gray {
+    color: #555555;
+}
+
+.text-font-new {
+    color: #828495;
+}
+
+.bg-theme-gray {
+    background-color: #F5F6FA;
+}
+
+.bg-theme-green {
+    background-color: #04543B;
+}
+
+.bg-theme-light-green {
+    background-color: #569456;
+}

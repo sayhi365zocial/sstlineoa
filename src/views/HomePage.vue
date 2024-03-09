@@ -8,9 +8,9 @@
             </div>
             <div class="row mb-3">
                 <div class="col-12">
-                    <span class="text-white">
+                    <div class="text-white text-center">
                         บริการออนไลน์จากเทศบาลศรีสุนทร ให้คุณจัดการทุกเรื่องได้ง่าย ๆ ด้วยตัวเองตลอด 24 ชั่วโมง
-                    </span>
+                    </div>
                 </div>
             </div>
             <div class="row mb-2 gx-2">
@@ -39,16 +39,18 @@
                                 </div>
                             </div>
                         </RouterLink>
-                        <div class="d-flex justify-content-center flex-column mb-2 p-3 rounded-3 overflow-hidden" id="normal-box">
-                            <div class="h-25">
-                                <p class="text-center text-black fs-6 mb-0">คำร้องทั่วไป</p>
-                            </div>
-                            <div class="position-relative h-75" id="normal-box-img">
-                                <div class="position-absolute d-flex justify-content-center">
-                                    <img src="/images/normal_request.png" alt="" class="img-fluid">
+                        <RouterLink to="/form-normal-request" class="text-decoration-none">
+                            <div class="d-flex justify-content-center flex-column mb-2 p-3 rounded-3 overflow-hidden" id="normal-box">
+                                <div class="h-25">
+                                    <p class="text-center text-black fs-6 mb-0">คำร้องทั่วไป</p>
+                                </div>
+                                <div class="position-relative h-75" id="normal-box-img">
+                                    <div class="position-absolute d-flex justify-content-center">
+                                        <img src="/images/normal_request.png" alt="" class="img-fluid">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </RouterLink>
                     </div>
                 </div>
             </div>
@@ -101,6 +103,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 100%;
     }
 
     #form-box {

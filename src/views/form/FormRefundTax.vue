@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -22,19 +22,19 @@
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="price">จํานวน (บาท) <span class="text-danger">*</span></label>
-                                <input type="number" step="1" class="form-control" name="price" id="price" value="">
+                                <input type="number" step="1" class="form-control form-control-lg" name="price" id="price" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="receipt_no">ตามใบเสร็จับเงินเลขที่ <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="receipt_no" id="receipt_no" value="">
+                                <input type="text" class="form-control form-control-lg" name="receipt_no" id="receipt_no" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="date">ลงวันที่ <span class="text-danger">*</span></label>
-                                <input type="date" class="form-control" name="date" id="date" value="">
+                                <input type="date" class="form-control form-control-lg" name="date" id="date" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="refund_price">มีความประสงค์ขอรับเงินภาษีที่ดินและสิ่งปลูกสร้างที่จ่ายเกินคืน เป็นจำนวนเงิน (บาท)<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="refund_price" id="refund_price" value="">
+                                <input type="text" class="form-control form-control-lg" name="refund_price" id="refund_price" value="">
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="refund_price">เนื่องจาก <span class="text-danger">*</span></label>
@@ -55,24 +55,15 @@
                         <div class="row">
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="receipt_path">ใบเสร็จรับเงินปีที่ผ่านมาหรือหลักฐานการชําระเงิน<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="receipt_path" required accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="receipt_path" />
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="id_card_path">บัตรประจําตัวประชาชน<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="id_card_path" required accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="id_card_path" />
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="other_path">อื่นๆ</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="other_path" accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="other_path" />
                             </div>
                         </div>
                         <div class="row">
@@ -82,7 +73,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -101,4 +92,5 @@
 <script setup>
     import PersonalInformation from '@/components/PersonalInformation.vue'
     import DateNow from '@/components/DateNow.vue'
+    import InputFile from '@/components/InputFile.vue'
 </script>

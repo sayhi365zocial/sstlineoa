@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-12 form-group mb-3">
                                 <label for="text">มีความประสงค์จะฆ่าสัตว์ ชนิด <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="animal_type" name="animal_type" placeholder="" value="" required>
+                                <input type="text" class="form-control form-control-lg" id="animal_type" name="animal_type" placeholder="" value="" required>
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="text">จำนวน (ตัว) <span class="text-danger">*</span></label>
@@ -57,11 +57,11 @@
                                 <label for="business_house_no">อยู่บ้านเลขที่ <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control " id="business_house_no" name="business_house_no" placeholder="" value="" required>
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="business_moo">หมู่ <span class="text-danger">*</span></label>
                                 <input type="number" class="form-control " id="business_moo" name="business_moo" placeholder="" value="">
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="business_soi">ตรอก/ซอย</label>
                                 <input type="text" class="form-control " id="business_soi" name="business_soi" placeholder="" value="" required>
                                 
@@ -110,11 +110,11 @@
                                 <input type="text" class="form-control " id="farm_house_no" name="farm_house_no" placeholder="" value="" required>
                                 
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="farm_moo">หมู่ </label>
                                 <input type="number" class="form-control " id="farm_moo" name="farm_moo" placeholder="" value="" required>
                             </div>
-                            <div class="col-12 form-group mb-3">
+                            <div class="col-6 form-group mb-3">
                                 <label for="farm_soi">ตรอก/ซอย </label>
                                 <input type="text" class="form-control " id="farm_soi" name="farm_soi" placeholder="" value="" required>
                                 
@@ -203,17 +203,14 @@
                         <div class="row">
                             <div class="col-12 mb-2 form-group mb-3">
                                 <label for="detail">สำเนาบัตรประจำตัวประชาชน ผู้มายื่นคำขอ<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input " id="applicant_id_card_file_path" name="applicant_id_card_file_path" required accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <InputFile name="applicant_id_card_file_path" />
                             </div>
                         </div>
 
                        <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -233,4 +230,5 @@
     import PersonalInformation from '@/components/PersonalInformation.vue'
     import DateNow from '@/components/DateNow.vue'
     import FormInstruction from '@/components/FormInstruction.vue'
+    import InputFile from '@/components/InputFile.vue'
 </script>

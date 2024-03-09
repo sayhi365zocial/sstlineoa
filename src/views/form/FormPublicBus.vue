@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -10,14 +10,21 @@
             <div class="row">
                 <div class="col-12">
                     <form class="form mt-1" action="" method="post" enctype="multipart/form-data">
-                        @include('form.top_form', ['topic_placeholder' => 'ระบุเรื่องที่ต้องการใช้รถสองแถว'])
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label mb-3">* เรื่อง</label>
+                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="ระบุเรื่องที่ต้องการร้องเรียน">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label mb-3">เรียน</label>
+                            <input type="text" class="form-control disabled" id="formGroupExampleInput2" placeholder="นายกเทศมนตรีตำบลศรีสุนทร" disabled>
+                        </div>
                         <hr>
                         <PersonalInformation />
                         <hr>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
                                 <label for="detail">มีความประสงค์ <span class="text-danger">*</span></label>
-                                <textarea name="detail" id="detail" class="form-control" rows="15" placeholder="ระบุ ความประสงค์ของท่าน"></textarea>
+                                <textarea name="detail" id="detail" class="form-control form-control-lg" rows="3" placeholder="ระบุ ความประสงค์ของท่าน"></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -28,7 +35,7 @@
                         <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>

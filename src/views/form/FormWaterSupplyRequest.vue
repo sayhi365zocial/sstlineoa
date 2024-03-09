@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -12,7 +12,7 @@
                     <form class="form mt-1" action="" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12">
-                                <p>เรียน นายกเทศมนตรีตำบลศรีสุนทร</p>
+                                <p class="fs-5">เรียน นายกเทศมนตรีตำบลศรีสุนทร</p>
                             </div>
                         </div>
                         <PersonalInformation />
@@ -33,59 +33,50 @@
                         </div>
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="house_no">อยู่บ้านเลขที่</label>
-                                <input type="text" class="form-control" id="for_house_no" name="for_house_no" placeholder="" value="" required>
+                                <label for="house_no" class="form-label mb-3">อยู่บ้านเลขที่</label>
+                                <input type="text" class="form-control form-control-lg" id="for_house_no" name="for_house_no" placeholder="อยู่บ้านเลขที่" value="" required>
+                            </div>
+                            <div class="col-6 form-group mb-3">
+                                <label for="moo" class="form-label mb-3">หมู่</label>
+                                <input type="number" class="form-control form-control-lg" id="for_moo" name="for_moo" value="" placeholder="หมู่">
+                            </div>
+                            <div class="col-6 form-group mb-3">
+                                <label for="soi" class="form-label mb-3">ตรอก/ซอย</label>
+                                <input type="text" class="form-control form-control-lg" id="for_soi" name="for_soi" value="" placeholder="ซอย">
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="moo">หมู่</label>
-                                <input type="number" class="form-control" id="for_moo" name="for_moo" value="" placeholder="">
+                                <label for="road" class="form-label mb-3">ถนน</label>
+                                <input type="text" class="form-control form-control-lg" id="for_road" name="for_road" value="" placeholder="ถนน">
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="soi">ตรอก/ซอย</label>
-                                <input type="text" class="form-control" id="for_soi" name="for_soi" value="" placeholder="">
+                                <label for="sub_district" class="form-label mb-3">ตำบล/แขวง</label>
+                                <input type="text" class="form-control form-control-lg" id="for_sub_district" name="for_sub_district" value="" placeholder="ตำบล/แขวง" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="road">ถนน</label>
-                                <input type="text" class="form-control" id="for_road" name="for_road" value="" placeholder="">
+                                <label for="district" class="form-label mb-3">อำเภอ/เขต</label>
+                                <input type="text" class="form-control form-control-lg" id="for_district" name="for_district" value="" placeholder="อำเภอ/เขต" required>
                             </div>
                             <div class="col-12 form-group mb-3">
-                                <label for="sub_district">ตำบล/แขวง</label>
-                                <input type="text" class="form-control" id="for_sub_district" name="for_sub_district" value="" required>
-                            </div>
-                            <div class="col-12 form-group mb-3">
-                                <label for="district">อำเภอ/เขต</label>
-                                <input type="text" class="form-control" id="for_district" name="for_district" value="" required>
-                            </div>
-                            <div class="col-12 form-group mb-3">
-                                <label for="province">จังหวัด</label>
-                                <input type="text" class="form-control" id="for_province" name="for_province" value="" required>
+                                <label for="province" class="form-label mb-3">จังหวัด</label>
+                                <input type="text" class="form-control form-control-lg" id="for_province" name="for_province" value="" placeholder="จังหวัด" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12 form-group mb-3">
-                                <label for="detail">บันทึกการตรวจสอบเอกสาร</label>
+                                <label for="detail" class="form-label mb-3">บันทึกการตรวจสอบเอกสาร</label>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
-                                <label for="detail">สำเนาบัตรประชาชนผู้ขอ<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="applicant_idcard_file_path" required accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <label for="detail" class="form-label mb-3">สำเนาบัตรประชาชนผู้ขอ<span class="text-danger">*</span></label>
+                                <InputFile name="applicant_idcard_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
-                                <label for="detail">สำเนาทะเบียนบ้านผู้ขอ<span class="text-danger">*</span></label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="applicant_house_registation_file_path" required accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <label for="detail" class="form-label mb-3">สำเนาทะเบียนบ้านผู้ขอ<span class="text-danger">*</span></label>
+                                <InputFile name="applicant_house_registation_file_path"/>
                             </div>
                             <div class="col-12 mb-2 form-group mb-3">
-                                <label for="detail">สำเนาทะเบียนบ้านที่ขอใช้ (หากไม่มีที่อยู่เดียวกับผู้ขอ)</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="" name="target_house_registation_file_path" accept="image/*,application/pdf">
-                                    <label class="custom-file-label" for="">เลือกไฟล์สำเนา</label>
-                                </div>
+                                <label for="detail" class="form-label mb-3">สำเนาทะเบียนบ้านที่ขอใช้ (หากไม่มีที่อยู่เดียวกับผู้ขอ)</label>
+                                <InputFile name="target_house_registation_file_path"/>
                             </div>
                         </div>
 
@@ -99,7 +90,7 @@
                        <FormInstruction />
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn bg-theme-green btn-block text-white">ส่งข้อมูล</button>
+                                <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>
                         </div>
                     </form>
@@ -119,4 +110,5 @@
     import PersonalInformation from '@/components/PersonalInformation.vue'
     import DateNow from '@/components/DateNow.vue'
     import FormInstruction from '@/components/FormInstruction.vue'
+    import InputFile from '@/components/InputFile.vue'
 </script>

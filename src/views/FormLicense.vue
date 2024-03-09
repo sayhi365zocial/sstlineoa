@@ -1,5 +1,6 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
+        <FormSuccessAlert />
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -23,6 +24,7 @@
 <script setup>
 import { reactive } from 'vue'
 import Menu from '@/components/Menu.vue'
+import FormSuccessAlert from '@/components/FormSuccessAlert.vue';
 
 const menus = reactive([
     {
@@ -68,12 +70,12 @@ const menus = reactive([
     {
         name: 'ใบขอรับอนุญาตประกอบกิจการรับทำการเก็บ ขน และกำจัดมูลฝอยติดเชื้อ',
         image: 'images/icon-e-service/e-service/15e-service.png',
-        link: 'form-business-collection-hazard-waste',
+        link: 'form-business-collect-hazard-waste',
     },
     {
         name: 'ใบรับแจ้งประกอบกิจการสถานที่จำหน่ายและสะสมอาหาร ',
         image: 'images/icon-e-service/e-service/16e-service.png',
-        link: 'form-business-collection-food',
+        link: 'form-business-collect-food',
     },
     {
         name: 'ใบรับแจ้งประกอบกิจการคำขอรับใบอนุญาตรับทำการเก็บขยะมูลฝอยและขนสิ่งปฏิกูล',

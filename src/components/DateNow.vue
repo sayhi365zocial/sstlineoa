@@ -1,8 +1,8 @@
 <template>
-    <div class="row">
+    <div class="row my-3">
         <div class="col-12">
             <div class="d-flex justify-content-end">
-                <div class="bg-secondary py-2 px-3 rounded-2">
+                <div class="bg-custom-gray py-3 px-4 rounded-2">
                     05 / กุมภาพันธ์ / 2567
                 </div>
             </div>

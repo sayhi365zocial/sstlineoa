@@ -21,3 +21,8 @@ npm run build
 npm run lint
 ```
 ** ตั้งแต่ 8-11
+
+user
+
+sales
+66777

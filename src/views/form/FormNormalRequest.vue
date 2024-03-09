@@ -1,5 +1,5 @@
 <template>
-    <section class="my-5">
+    <section class="my-5 mx-2">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -11,16 +11,16 @@
                 <div class="col-12">
                     <form action="" method="post">
                         <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">* เรื่อง</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ระบุเรื่องที่ต้องการร้องเรียน">
+                            <label for="formGroupExampleInput" class="form-label mb-3">* เรื่อง</label>
+                            <input type="text" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="ระบุเรื่องที่ต้องการร้องเรียน">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">เรียน</label>
+                            <label for="formGroupExampleInput2" class="form-label mb-3">เรียน</label>
                             <input type="text" class="form-control disabled" id="formGroupExampleInput2" placeholder="นายกเทศมนตรีตำบลศรีสุนทร" disabled>
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">มีความประสงค์</label>
-                            <textarea name="" id="" class="form-control" rows="10" placeholder="ระบุความประสงค์ของท่าน"></textarea>
+                            <label for="formGroupExampleInput2" class="form-label mb-3">มีความประสงค์</label>
+                            <textarea name="" id="" class="form-control form-control-lg" rows="10" placeholder="ระบุความประสงค์ของท่าน"></textarea>
                         </div>
                         <FormInstruction />
                         <div class="mb-3">

@@ -3,12 +3,15 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import FormLicense from '../views/FormLicense.vue'
 import RequestForm from '../views/RequestForm.vue'
+import Register from '../views/registration/Register.vue'
+import OTP from '@/views/registration/OTP.vue'
+import Address from '@/views/registration/Address.vue'
 import TaxForm from '../views/TaxForm.vue'
 import FormNormalRequest from '../views/form/FormNormalRequest.vue'
 import FormBuilding from '@/views/form/FormBuilding.vue'
-import FormBusinessCollectionFood from '@/views/form/FormBusinessCollectionFood.vue'
-import FormBusinessCollectionHazardWaste from '@/views/form/FormBusinessCollectionHazardWaste.vue'
-import FormBusinessCollectionWaste from '@/views/form/FormBusinessCollectionWaste.vue'
+import FormBusinessCollectFood from '@/views/form/FormBusinessCollectFood.vue'
+import FormBusinessCollectHazardWaste from '@/views/form/FormBusinessCollectHazardWaste.vue'
+import FormBusinessCollectWaste from '@/views/form/FormBusinessCollectWaste.vue'
 import FormBusinessHealthHazard from '@/views/form/FormBusinessHealthHazard.vue'
 import FormBusinessMarket from '@/views/form/FormBusinessMarket.vue'
 import FormBusinessSlaughterHouse from '@/views/form/FormBusinessSlaughterHouse.vue'
@@ -32,6 +35,21 @@ const router = createRouter({
       component: HomePage
     },
     {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: Address
+    },
+    {
+      path: '/otp',
+      name: 'otp',
+      component: OTP
+    },
+    {
       path: '/form',
       name: 'form',
       component: FormLicense
@@ -47,14 +65,14 @@ const router = createRouter({
       component: FormBuilding
     },
     {
-      path: '/form-business-collection-food',
-      name: 'form-business-collection-food',
-      component: FormBusinessCollectionFood,
+      path: '/form-business-collect-food',
+      name: 'form-business-collect-food',
+      component: FormBusinessCollectFood,
     },
     {
-      path: '/form-business-collection-waste',
-      name: 'form-business-collection-waste',
-      component: FormBusinessCollectionWaste,
+      path: '/form-business-collect-waste',
+      name: 'form-business-collect-waste',
+      component: FormBusinessCollectWaste,
     },
     {
       path: '/form-business-health-hazard',
@@ -122,9 +140,9 @@ const router = createRouter({
       component: FormWaterSupplyRequest,
     },
     {
-      path: '/form-business-collection-hazard-waste',
-      name: 'form-business-collection-hazard-waste',
-      component: FormBusinessCollectionHazardWaste,
+      path: '/form-business-collect-hazard-waste',
+      name: 'form-business-collect-hazard-waste',
+      component: FormBusinessCollectHazardWaste,
     },
 
     {
