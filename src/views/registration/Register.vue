@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-12 form-group mb-3">
                                 <label for="fax" class="form-label mb-3">โทรสาร</label>
-                                <input type="text" class="form-control form-control-lg" id="fax" name="fax" value="โทรสาร" placeholder="">
+                                <input type="text" class="form-control form-control-lg" id="fax" name="fax" value="" placeholder="โทรสาร">
                             </div>
                         </div>
                         
@@ -72,9 +72,6 @@
 </template>
 
 <style scoped>
-    .alert-text {
-        font-size: 0.75rem;
-    }
 </style>
 
 <script setup>

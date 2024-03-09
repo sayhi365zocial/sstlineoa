@@ -29,9 +29,6 @@
 </template>
 
 <style scoped>
-    .alert-text {
-        font-size: 0.75rem;
-    }
 </style>
 
 <script setup>

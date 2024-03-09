@@ -218,10 +218,7 @@
     </section>    
 </template>
 
-<style scoped>
-    .alert-text {
-        font-size: 0.75rem;
-    }
+<style>
 </style>
 
 <script setup>

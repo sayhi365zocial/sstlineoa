@@ -1,4 +1,4 @@
-<template>
+    <template>
     <div class="alert alert-warning alert-text" role="alert">
         ข้อปฏิบัติการใช้งานแบบฟอร์มออนไลน์
         <ol class="ps-3">
@@ -10,7 +10,11 @@
     </div>
 </template>
 
-<style></style>
+<style scoped>
+    .alert-text {
+        font-size: 0.75rem;
+    }
+</style>
 
 <script setup>
     
