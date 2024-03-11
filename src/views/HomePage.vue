@@ -98,12 +98,18 @@
     $heightForm: 14rem;
     $marginSpacer: 0.5rem;
 
-    section {
+    section {        
         background-image: url('./images/bg.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
+    }
+
+    .container {
+        @media screen and (min-width: 420px) {
+            width: 25rem;
+        }
     }
 
     #form-box {

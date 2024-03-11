@@ -23,6 +23,11 @@
                                     ส่งคำร้องเรียนสำเร็จ
                                 </div>
                                 <div class="text-secondary text-center">สามารถติดตามสถานะการดำเนินการต่างๆ ได้ทาง <span class="text-success">Line Official</span> ของเทศบาลตำบลศรีสุนทร</div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="w-75 my-3">
+                                        <button type="button" class="btn bg-theme-green btn-block w-100 text-white" data-bs-dismiss="modal">ปิด</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

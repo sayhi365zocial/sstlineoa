@@ -146,7 +146,7 @@
                         </div>
 
                        <FormInstruction />
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-12">
                                 <button type="submit" class="btn w-100 bg-theme-green btn-block text-white">ส่งข้อมูล</button>
                             </div>

@@ -187,7 +187,7 @@
                             </div>
                         </div>
                         <div class="col-12 form-group mb-3">
-                            <label for="">ร class="form-label mb-3"ายละเอียดการเช่า</label>
+                            <label for="" class="form-label mb-3">รายละเอียดการเช่า</label>
                             <input type="text" class="form-control form-control-lg" id="rent_detail" name="rent_detail" value="">
                         </div>
                         <div class="col-12 mb-2 form-group mb-3">
@@ -259,7 +259,6 @@
 
                         <RegistrationFileUpload />
 
-                    
                         <FormInstruction />
                         <div class="row mb-3">
                             <div class="col-12">

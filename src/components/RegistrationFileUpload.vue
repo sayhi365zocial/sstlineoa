@@ -45,5 +45,6 @@
 <style>
 </style>
 
-<script setpu>
+<script setup>
+import InputFile from './InputFile.vue'
 </script>
