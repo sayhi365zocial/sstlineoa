@@ -99,7 +99,7 @@
     $marginSpacer: 0.5rem;
 
     section {        
-        background-image: url('./images/bg.png');
+        background-image: url('/images/bg.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
