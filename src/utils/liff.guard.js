@@ -11,5 +11,7 @@ export default async (to, from, next) => {
     await setupLiff()
   }
 
+  //t1
+
   next()
 }
