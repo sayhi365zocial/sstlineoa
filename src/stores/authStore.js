@@ -1,5 +1,5 @@
 import { mockUser, isAuthGuardActive } from '@/constant/config'
-import { getCurrentUser } from '@/utils'
+import { getCurrentUser, setCurrentUser } from '@/utils'
 import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', {
@@ -7,6 +7,12 @@ export const useAuthStore = defineStore('auth', {
     currentUser: isAuthGuardActive ? getCurrentUser() : mockUser
   }),
   actions: {
+    async login({ accessToken, lineUserId }) {
+      console.log('Logging in with', { accessToken, lineUserId })
+      // Dummy response simulation
+      setCurrentUser({ accessToken, lineUserId })
+      this.currentUser = { token: accessToken, userId: lineUserId }
+    },
     setUser(payload) {
       this.currentUser = { profile: {}, ...this.currentUser, ...payload }
     },
@@ -19,8 +25,5 @@ export const useAuthStore = defineStore('auth', {
     setLogout() {
       this.currentUser = null
     }
-  },
-  getters: {
-    doubleCount: () => this.count * 2
   }
 })

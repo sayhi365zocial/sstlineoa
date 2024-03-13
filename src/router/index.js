@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PageNotfound from '../views/PageNotfound.vue'
+import Login from '../views/auth/Login.vue'
 import HomePage from '../views/HomePage.vue'
 import FormLicense from '../views/FormLicense.vue'
 import RequestForm from '../views/RequestForm.vue'
@@ -32,10 +33,31 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: `/auth`,
+      redirect: `/auth/login`,
+      children: [
+        {
+          path: 'login',
+          name: 'login',
+          component: Login
+        }
+      ]
+    },
+    {
       path: '/',
-      name: 'home',
-      component: HomePage,
-      meta: { loginRequired: true }
+      redirect: `/app`
+    },
+    {
+      path: '/app',
+      redirect: `/app/home`,
+      meta: { loginRequired: true },
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: HomePage
+        }
+      ]
     },
     {
       path: '/register',

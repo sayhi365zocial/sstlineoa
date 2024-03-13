@@ -1,5 +1,5 @@
-export const isLiffGuardActive = false
-export const isAuthGuardActive = false
+export const isLiffGuardActive = true
+export const isAuthGuardActive = true
 
 export const mockUser = {
   username: 'skeletonadmin',
