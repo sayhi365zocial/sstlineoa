@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
+import PageNotfound from '../views/PageNotfound.vue'
 import HomePage from '../views/HomePage.vue'
 import FormLicense from '../views/FormLicense.vue'
 import RequestForm from '../views/RequestForm.vue'
@@ -25,6 +25,8 @@ import FormPublicBus from '@/views/form/FormPublicBus.vue'
 import FormRefundTax from '@/views/form/FormRefundTax.vue'
 import FormRequestChangeProperty from '@/views/form/FormRequestChangeProperty.vue'
 import FormWaterSupplyRequest from '@/views/form/FormWaterSupplyRequest.vue'
+import authGuard from '@/utils/auth.guard'
+import liffGuard from '@/utils/liff.guard'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,7 +34,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePage
+      component: HomePage,
+      meta: { loginRequired: true }
     },
     {
       path: '/register',
@@ -67,96 +70,103 @@ const router = createRouter({
     {
       path: '/form-business-collect-food',
       name: 'form-business-collect-food',
-      component: FormBusinessCollectFood,
+      component: FormBusinessCollectFood
     },
     {
       path: '/form-business-collect-waste',
       name: 'form-business-collect-waste',
-      component: FormBusinessCollectWaste,
+      component: FormBusinessCollectWaste
     },
     {
       path: '/form-business-health-hazard',
       name: 'form-business-health-hazard',
-      component: FormBusinessHealthHazard,
+      component: FormBusinessHealthHazard
     },
     {
       path: '/form-business-market',
       name: 'form-business-market',
-      component: FormBusinessMarket,
+      component: FormBusinessMarket
     },
     {
       path: '/form-business-slaughter-house',
       name: 'form-business-slaughter-house',
-      component: FormBusinessSlaughterHouse,
+      component: FormBusinessSlaughterHouse
     },
     {
       path: '/form-clearning-garbage',
       name: 'form-clearning-garbage',
-      component: FormClearningGarbage,
+      component: FormClearningGarbage
     },
     {
       path: '/form-clearning-waste',
       name: 'form-clearning-waste',
-      component: FormClearningWaste,
+      component: FormClearningWaste
     },
     {
       path: '/form-complain-request',
       name: 'form-complain-request',
-      component: FormComplainRequest,
+      component: FormComplainRequest
     },
     {
       path: '/form-durable-article-request',
       name: 'form-durable-article-request',
-      component: FormDurableArticleRequest,
+      component: FormDurableArticleRequest
     },
     {
       path: '/form-notice-corruption',
       name: 'form-notice-corruption',
-      component: FormNoticeCorruption,
+      component: FormNoticeCorruption
     },
     {
       path: '/form-objection-tax',
       name: 'form-objection-tax',
-      component: FormObjectionTax,
+      component: FormObjectionTax
     },
     {
       path: '/form-public-bus',
       name: 'form-public-bus',
-      component: FormPublicBus,
+      component: FormPublicBus
     },
     {
       path: '/form-refund-tax',
       name: 'form-refund-tax',
-      component: FormRefundTax,
+      component: FormRefundTax
     },
     {
       path: '/form-request-change-property',
       name: 'form-request-change-property',
-      component: FormRequestChangeProperty,
+      component: FormRequestChangeProperty
     },
     {
       path: '/form-water-supply-request',
       name: 'form-water-supply-request',
-      component: FormWaterSupplyRequest,
+      component: FormWaterSupplyRequest
     },
     {
       path: '/form-business-collect-hazard-waste',
       name: 'form-business-collect-hazard-waste',
-      component: FormBusinessCollectHazardWaste,
+      component: FormBusinessCollectHazardWaste
     },
 
     {
       path: '/request',
       name: 'request',
-      component: RequestForm,
+      component: RequestForm
     },
     {
       path: '/tax',
       name: 'tax',
-      component: TaxForm,
+      component: TaxForm
     },
-
+    {
+      path: '/:catchAll(.*)',
+      component: PageNotfound,
+      name: 'pagenotfound'
+    }
   ]
 })
+
+router.beforeEach(liffGuard)
+router.beforeEach(authGuard)
 
 export default router
