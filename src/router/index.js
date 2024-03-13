@@ -33,6 +33,10 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      redirect: `/app` // ใส่ component หน้าแรกสุด ตรงนี้น้า แล้วปุ่มให้ route  ไป   home
+    },
+    {
       path: `/auth`,
       redirect: `/auth/login`,
       children: [
@@ -40,12 +44,23 @@ const router = createRouter({
           path: 'login',
           name: 'login',
           component: Login
+        },
+        {
+          path: '/register',
+          name: 'register',
+          component: Register
+        },
+        {
+          path: '/address',
+          name: 'address',
+          component: Address
+        },
+        {
+          path: '/otp',
+          name: 'otp',
+          component: OTP
         }
       ]
-    },
-    {
-      path: '/',
-      redirect: `/app`
     },
     {
       path: '/app',
@@ -56,130 +71,115 @@ const router = createRouter({
           path: 'home',
           name: 'home',
           component: HomePage
+        },
+        {
+          path: '/form',
+          name: 'form',
+          component: FormLicense
+        },
+        {
+          path: '/form-normal-request',
+          name: 'form-normal-request',
+          component: FormNormalRequest
+        },
+        {
+          path: '/form-building',
+          name: 'form-building',
+          component: FormBuilding
+        },
+        {
+          path: '/form-business-collect-food',
+          name: 'form-business-collect-food',
+          component: FormBusinessCollectFood
+        },
+        {
+          path: '/form-business-collect-waste',
+          name: 'form-business-collect-waste',
+          component: FormBusinessCollectWaste
+        },
+        {
+          path: '/form-business-health-hazard',
+          name: 'form-business-health-hazard',
+          component: FormBusinessHealthHazard
+        },
+        {
+          path: '/form-business-market',
+          name: 'form-business-market',
+          component: FormBusinessMarket
+        },
+        {
+          path: '/form-business-slaughter-house',
+          name: 'form-business-slaughter-house',
+          component: FormBusinessSlaughterHouse
+        },
+        {
+          path: '/form-clearning-garbage',
+          name: 'form-clearning-garbage',
+          component: FormClearningGarbage
+        },
+        {
+          path: '/form-clearning-waste',
+          name: 'form-clearning-waste',
+          component: FormClearningWaste
+        },
+        {
+          path: '/form-complain-request',
+          name: 'form-complain-request',
+          component: FormComplainRequest
+        },
+        {
+          path: '/form-durable-article-request',
+          name: 'form-durable-article-request',
+          component: FormDurableArticleRequest
+        },
+        {
+          path: '/form-notice-corruption',
+          name: 'form-notice-corruption',
+          component: FormNoticeCorruption
+        },
+        {
+          path: '/form-objection-tax',
+          name: 'form-objection-tax',
+          component: FormObjectionTax
+        },
+        {
+          path: '/form-public-bus',
+          name: 'form-public-bus',
+          component: FormPublicBus
+        },
+        {
+          path: '/form-refund-tax',
+          name: 'form-refund-tax',
+          component: FormRefundTax
+        },
+        {
+          path: '/form-request-change-property',
+          name: 'form-request-change-property',
+          component: FormRequestChangeProperty
+        },
+        {
+          path: '/form-water-supply-request',
+          name: 'form-water-supply-request',
+          component: FormWaterSupplyRequest
+        },
+        {
+          path: '/form-business-collect-hazard-waste',
+          name: 'form-business-collect-hazard-waste',
+          component: FormBusinessCollectHazardWaste
+        },
+        {
+          path: '/request',
+          name: 'request',
+          component: RequestForm
+        },
+        {
+          path: '/tax',
+          name: 'tax',
+          component: TaxForm
         }
       ]
     },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
-    },
-    {
-      path: '/address',
-      name: 'address',
-      component: Address
-    },
-    {
-      path: '/otp',
-      name: 'otp',
-      component: OTP
-    },
-    {
-      path: '/form',
-      name: 'form',
-      component: FormLicense
-    },
-    {
-      path: '/form-normal-request',
-      name: 'form-normal-request',
-      component: FormNormalRequest
-    },
-    {
-      path: '/form-building',
-      name: 'form-building',
-      component: FormBuilding
-    },
-    {
-      path: '/form-business-collect-food',
-      name: 'form-business-collect-food',
-      component: FormBusinessCollectFood
-    },
-    {
-      path: '/form-business-collect-waste',
-      name: 'form-business-collect-waste',
-      component: FormBusinessCollectWaste
-    },
-    {
-      path: '/form-business-health-hazard',
-      name: 'form-business-health-hazard',
-      component: FormBusinessHealthHazard
-    },
-    {
-      path: '/form-business-market',
-      name: 'form-business-market',
-      component: FormBusinessMarket
-    },
-    {
-      path: '/form-business-slaughter-house',
-      name: 'form-business-slaughter-house',
-      component: FormBusinessSlaughterHouse
-    },
-    {
-      path: '/form-clearning-garbage',
-      name: 'form-clearning-garbage',
-      component: FormClearningGarbage
-    },
-    {
-      path: '/form-clearning-waste',
-      name: 'form-clearning-waste',
-      component: FormClearningWaste
-    },
-    {
-      path: '/form-complain-request',
-      name: 'form-complain-request',
-      component: FormComplainRequest
-    },
-    {
-      path: '/form-durable-article-request',
-      name: 'form-durable-article-request',
-      component: FormDurableArticleRequest
-    },
-    {
-      path: '/form-notice-corruption',
-      name: 'form-notice-corruption',
-      component: FormNoticeCorruption
-    },
-    {
-      path: '/form-objection-tax',
-      name: 'form-objection-tax',
-      component: FormObjectionTax
-    },
-    {
-      path: '/form-public-bus',
-      name: 'form-public-bus',
-      component: FormPublicBus
-    },
-    {
-      path: '/form-refund-tax',
-      name: 'form-refund-tax',
-      component: FormRefundTax
-    },
-    {
-      path: '/form-request-change-property',
-      name: 'form-request-change-property',
-      component: FormRequestChangeProperty
-    },
-    {
-      path: '/form-water-supply-request',
-      name: 'form-water-supply-request',
-      component: FormWaterSupplyRequest
-    },
-    {
-      path: '/form-business-collect-hazard-waste',
-      name: 'form-business-collect-hazard-waste',
-      component: FormBusinessCollectHazardWaste
-    },
 
-    {
-      path: '/request',
-      name: 'request',
-      component: RequestForm
-    },
-    {
-      path: '/tax',
-      name: 'tax',
-      component: TaxForm
-    },
     {
       path: '/:catchAll(.*)',
       component: PageNotfound,
